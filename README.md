@@ -15,11 +15,11 @@ The Python script `project-1.ipynb` contains the code used to train the machine 
 
 ## Flutter App
 
-The APK file for the Flutter app can be downloaded from [here](https://drive.google.com/file/d/1cidPW47IeWNKFKPdkQmbFRXBKPeb8QHa/view?usp=sharing). The app allows users to capture or select images containing handwritten digits and then processes them through the trained model to recognize the digit present in the image.
+The APK file for the Flutter app can be downloaded from [here](https://drive.google.com/file/d/1DbvlW1KJXpMAFoYmWV3cTlEpPXQ6Bwow/view?usp=sharing). The app allows users to capture or select images containing handwritten digits and then processes them through the trained model to recognize the digit present in the image.
 
 ## Usage
 
-1. Install the Flutter app by downloading the APK from [here](https://drive.google.com/file/d/1cidPW47IeWNKFKPdkQmbFRXBKPeb8QHa/view?usp=sharing).
+1. Install the Flutter app by downloading the APK from [here](https://drive.google.com/file/d/1DbvlW1KJXpMAFoYmWV3cTlEpPXQ6Bwow/view?usp=sharing).
 2. Open the app on your device.
 3. Use the camera or select images from your device's gallery containing handwritten digits.
 4. The app will process the image using the trained model and display the recognized digit.

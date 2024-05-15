@@ -11,9 +11,10 @@ class UploadImage extends StatefulWidget {
 class _UploadImageState extends State<UploadImage> {
   final picker = ImagePicker();
   Classifier classifier = Classifier();
-  late PickedFile image1;
+  PickedFile? image1;
   XFile? imagetaken;
   int digit = -1;
+  int digit2=-1;
 
   // For main page BottomNavigator
   final double iconSize = 30;
@@ -45,12 +46,13 @@ class _UploadImageState extends State<UploadImage> {
             imageQuality: 100,
           ));
           if(imagetaken!=null) {
-            image1=imagetaken as PickedFile;
-            digit = await classifier.classifyImage(image1);
+            image1=PickedFile(imagetaken!.path);
+            digit2 = await classifier.classifyImage(PickedFile(imagetaken!.path));
+            setState(() {
+              image1=PickedFile(imagetaken!.path);
+              digit=digit2;
+            });
           }
-          setState(() {
-
-          });
         },
       ),
       appBar: AppBar(
@@ -80,7 +82,7 @@ class _UploadImageState extends State<UploadImage> {
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: digit == -1 ? AssetImage('assets/white_background.jpg')
-                      : Image.file(File(image1.path)).image ,
+                      : Image.file(File(image1!.path)).image ,
                 ),
               ),
             ),
